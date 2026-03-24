@@ -1,17 +1,38 @@
-[gd_scene load_steps=4 format=4 uid="uid://bbe1gnkrluus1"]
+[gd_scene format=4 uid="uid://bbe1gnkrluus1"]
 
 [ext_resource type="Texture2D" uid="uid://fpfme8tl7dus" path="res://Sprites/Backgrounds/backgroundForest.png" id="1_i63mn"]
 [ext_resource type="TileSet" uid="uid://bflv6wtvteymx" path="res://Sprites/Tiles/new_tile_set.tres" id="1_oiua3"]
 [ext_resource type="PackedScene" uid="uid://c4ywbklgco3up" path="res://Scenes/player.tscn" id="3_vnunq"]
+[ext_resource type="Script" uid="uid://b5lb2y8vxxne5" path="res://Scenes/enemy.gd" id="4_nh7xm"]
+[ext_resource type="Texture2D" uid="uid://c62pkcs4i4qkk" path="res://Sprites/Characters/character_0024.png" id="4_nw7js"]
 
-[node name="Main" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_nh7xm"]
+radius = 8.0
 
-[node name="BackgroundForest" type="Sprite2D" parent="."]
+[node name="Main" type="Node2D" unique_id=1712301001]
+
+[node name="BackgroundForest" type="Sprite2D" parent="." unique_id=119754240]
 position = Vector2(274, -100)
 texture = ExtResource("1_i63mn")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1940517327]
 tile_map_data = PackedByteArray("AAAAAAAAAAABAAQAAAABAAAAAAABAAQAAAACAAAAAAABAAQAAAAAAAEAAAABAAYAAAABAAEAAAABAAYAAAACAAEAAAABAAYAAAAGAAEAAAABAAYAAAAFAAEAAAABAAYAAAAFAAIAAAABAAYAAAAGAAIAAAABAAYAAAAFAAAAAAABAAUAAAAGAAAAAAABAAUAAAAIAAEAAAABAAYAAAAJAAEAAAABAAYAAAAIAAAAAAABAAUAAAAJAAAAAAABAAUAAAAMAAIAAAACAAYAAAANAAIAAAACAAYAAAANAAMAAAACAAYAAAAMAAMAAAACAAYAAAAMAAEAAAABAAUAAAANAAEAAAABAAUAAAARAAMAAAABAAYAAAAQAAMAAAABAAYAAAAQAAQAAAABAAYAAAARAAQAAAABAAYAAAAQAAIAAAACAAUAAAARAAIAAAACAAUAAAAUAAMAAAABAAYAAAATAAMAAAABAAYAAAATAAIAAAABAAYAAAAUAAIAAAABAAYAAAAUAAEAAAACAAUAAAATAAEAAAACAAUAAAD//wEAAAAAAAYAAAD//wAAAAAAAAUAAAA=")
 tile_set = ExtResource("1_oiua3")
 
-[node name="Player" parent="." instance=ExtResource("3_vnunq")]
+[node name="Player" parent="." unique_id=2116383489 instance=ExtResource("3_vnunq")]
+
+[node name="Enemy" type="Area2D" parent="." unique_id=1029420842]
+position = Vector2(71, 22)
+script = ExtResource("4_nh7xm")
+move_direction = Vector2(0, -50)
+move_speed = 40.0
+
+[node name="Sprite" type="Sprite2D" parent="Enemy" unique_id=660198554]
+texture = ExtResource("4_nw7js")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=2113965880]
+shape = SubResource("CircleShape2D_nh7xm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy" unique_id=407583669]
+
+[connection signal="body_entered" from="Enemy" to="Enemy" method="_on_body_entered"]
