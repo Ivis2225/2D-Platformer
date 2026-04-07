@@ -76,7 +76,7 @@ _data = {
 &"idle": SubResource("Animation_cvnsp")
 }
 
-[node name="Player" type="CharacterBody2D" unique_id=1432697754]
+[node name="Player" type="CharacterBody2D" unique_id=1432697754 groups=["Player"]]
 script = ExtResource("1_cvnsp")
 
 [node name="Character0000" type="Sprite2D" parent="." unique_id=587456658]

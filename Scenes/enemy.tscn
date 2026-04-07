@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cbtslt5vdjpjg"]
+
+[ext_resource type="Script" uid="uid://b5lb2y8vxxne5" path="res://Scenes/enemy.gd" id="1_287tu"]
+[ext_resource type="Texture2D" uid="uid://dg1b3gvsxv4iq" path="res://Sprites/Characters/character_0025.png" id="2_0830c"]
+[ext_resource type="Texture2D" uid="uid://c62pkcs4i4qkk" path="res://Sprites/Characters/character_0024.png" id="3_ghaa6"]
+[ext_resource type="Texture2D" uid="uid://msdpa3b2ukh3" path="res://Sprites/Characters/character_0026.png" id="4_1dp5w"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nh7xm"]
+radius = 8.0
+
+[sub_resource type="Animation" id="Animation_aur7v"]
+resource_name = "Fly"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.26666668),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_ghaa6"), ExtResource("2_0830c"), ExtResource("4_1dp5w")]
+}
+
+[sub_resource type="Animation" id="Animation_ptpgp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_ghaa6")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2uqsa"]
+_data = {
+&"Fly": SubResource("Animation_aur7v"),
+&"RESET": SubResource("Animation_ptpgp")
+}
+
+[node name="Enemy" type="Area2D" unique_id=2103151942]
+script = ExtResource("1_287tu")
+move_direction = Vector2(0, -70)
+move_speed = 40.0
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1685889505]
+texture = ExtResource("2_0830c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1627993761]
+shape = SubResource("CircleShape2D_nh7xm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1915980286]
+libraries/ = SubResource("AnimationLibrary_2uqsa")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
