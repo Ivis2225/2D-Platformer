@@ -13,7 +13,7 @@
 [node name="Main" type="Node2D" unique_id=1712301001]
 
 [node name="BackgroundForest" type="Sprite2D" parent="." unique_id=119754240]
-position = Vector2(274, -100)
+position = Vector2(224, -106)
 texture = ExtResource("1_i63mn")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1940517327]
@@ -49,8 +49,9 @@ move_speed = 60.0
 position = Vector2(272, 85)
 
 [node name="EndFlag" type="Area2D" parent="." unique_id=1028902655]
+position = Vector2(319, 18)
 script = ExtResource("6_5r5j8")
-scene_to_load = null
+scene_to_load = ExtResource("3_vnunq")
 
 [node name="Flag" type="Sprite2D" parent="EndFlag" unique_id=1883487920]
 position = Vector2(46, -9)
