@@ -1,0 +1,112 @@
+[gd_scene format=4 uid="uid://ii4w5c8yv54s"]
+
+[ext_resource type="Script" uid="uid://bgfaniarqyafx" path="res://Scenes/node_2d.gd" id="1_4ge3q"]
+[ext_resource type="Texture2D" uid="uid://cxrv0no1ab8hc" path="res://Sprites/Backgrounds/backgroundDesert.png" id="2_4ge3q"]
+[ext_resource type="TileSet" uid="uid://bflv6wtvteymx" path="res://Sprites/Tiles/new_tile_set.tres" id="3_001cu"]
+[ext_resource type="PackedScene" uid="uid://c4ywbklgco3up" path="res://Scenes/player.tscn" id="4_5ufib"]
+[ext_resource type="PackedScene" uid="uid://d3d77g2etjelj" path="res://Scenes/coin.tscn" id="5_diio2"]
+[ext_resource type="PackedScene" uid="uid://cbtslt5vdjpjg" path="res://Scenes/enemy.tscn" id="6_v1bqs"]
+[ext_resource type="Script" uid="uid://dmf0fy8g241kc" path="res://Scripts/end_flag.gd" id="7_7qdet"]
+[ext_resource type="PackedScene" uid="uid://cgggk6bwcrhck" path="res://Scenes/menu.tscn" id="8_8npbe"]
+[ext_resource type="Texture2D" uid="uid://boekx8wdrkdv5" path="res://Sprites/Objects/tile_0112.png" id="8_57dsp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5r5j8"]
+
+[node name="Main" type="Node2D" unique_id=1712301001]
+
+[node name="BackRound" type="Node2D" parent="." unique_id=1675172039]
+modulate = Color(0.9792667, 0.9037399, 0.60612965, 1)
+script = ExtResource("1_4ge3q")
+
+[node name="BackgroundForest" type="Sprite2D" parent="BackRound" unique_id=119754240]
+modulate = Color(0.9792667, 0.9037399, 0.60612965, 1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4ge3q")
+
+[node name="BackgroundForest2" type="Sprite2D" parent="BackRound" unique_id=95351818]
+modulate = Color(0.9792667, 0.9037399, 0.60612965, 1)
+position = Vector2(510, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4ge3q")
+
+[node name="BackgroundForest3" type="Sprite2D" parent="BackRound" unique_id=20630265]
+modulate = Color(0.9792667, 0.9037399, 0.60612965, 1)
+position = Vector2(1020, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4ge3q")
+
+[node name="BackgroundForest4" type="Sprite2D" parent="BackRound" unique_id=1531600539]
+modulate = Color(0.9792667, 0.9037399, 0.60612965, 1)
+position = Vector2(-510, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4ge3q")
+
+[node name="BackgroundForest5" type="Sprite2D" parent="BackRound" unique_id=1089284525]
+modulate = Color(0.9792667, 0.9037399, 0.60612965, 1)
+position = Vector2(-1020, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4ge3q")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1940517327]
+tile_map_data = PackedByteArray("AAD//wAAAAAEAAAAAAAAAAAAAAAEAAAAAAABAAAAAAAEAAAAAAACAAAAAAAEAAAAAAADAAAAAAAEAAAAAAAEAP//AAAEAAAAAAAHAAAAAAAEAAAAAAAIAAAAAAAEAAAAAAAJAAAAAAAEAAAAAAAFAP7/AAAEAAAAAAANAAIAAAAEAAAAAAAOAAIAAAAEAAAAAAAPAAIAAAAEAAAAAAASAAEAAAAEAAAAAAAVAAEAAAAEAAAAAAAYAAAAAAAEAAAAAAAZAAAAAAAEAAAAAAAaAAAAAAAEAAAAAAAbAAAAAAAEAAAAAAAcAAAAAAAEAAAAAAAfAP//AAAEAAAAAAAiAP//AAAEAAAAAAAkAAAAAAAEAAAAAAAmAP//AAAEAAAAAAAoAP7/AAAEAAAAAAAqAP3/AAAEAAAAAAAsAP7/AAAEAAAAAAAtAP7/AAAEAAAAAAAuAP7/AAAEAAAAAAAvAP7/AAAEAAAAAAAwAP7/AAAEAAAAAAAsAP//AAAFAAAAAAAtAP//AAAFAAAAAAAuAP//AAAFAAAAAAAvAP//AAAFAAAAAAAwAP//AAAFAAAAAAD//wEAAAAFAAAAAAAAAAEAAAAFAAAAAAABAAEAAAAFAAAAAAACAAEAAAAFAAAAAAADAAEAAAAFAAAAAAA=")
+tile_set = ExtResource("3_001cu")
+
+[node name="Player" parent="." unique_id=2116383489 instance=ExtResource("4_5ufib")]
+
+[node name="Coins" type="Node" parent="." unique_id=1068841369]
+
+[node name="coin2" parent="Coins" unique_id=1254235064 instance=ExtResource("5_diio2")]
+position = Vector2(128, -55)
+
+[node name="coin3" parent="Coins" unique_id=440627544 instance=ExtResource("5_diio2")]
+position = Vector2(274, 23)
+
+[node name="coin4" parent="Coins" unique_id=1845963005 instance=ExtResource("5_diio2")]
+position = Vector2(388, 4)
+
+[node name="coin5" parent="Coins" unique_id=808824757 instance=ExtResource("5_diio2")]
+position = Vector2(494, -16)
+
+[node name="coin6" parent="Coins" unique_id=92117794 instance=ExtResource("5_diio2")]
+position = Vector2(658, -14)
+
+[node name="coin7" parent="Coins" unique_id=1904190779 instance=ExtResource("5_diio2")]
+position = Vector2(766, -68)
+
+[node name="Enemies" type="Node" parent="." unique_id=1229462224]
+
+[node name="Enemy" parent="Enemies" unique_id=2103151942 instance=ExtResource("6_v1bqs")]
+position = Vector2(119, 10)
+move_speed = 70.0
+
+[node name="Enemy2" parent="Enemies" unique_id=726042534 instance=ExtResource("6_v1bqs")]
+position = Vector2(305, 76)
+move_speed = 70.0
+
+[node name="Enemy3" parent="Enemies" unique_id=36487614 instance=ExtResource("6_v1bqs")]
+position = Vector2(417, 7)
+move_direction = Vector2(-70, 0)
+move_speed = 70.0
+
+[node name="Enemy4" parent="Enemies" unique_id=815045713 instance=ExtResource("6_v1bqs")]
+position = Vector2(539, 47)
+move_speed = 70.0
+
+[node name="Enemy5" parent="Enemies" unique_id=559992639 instance=ExtResource("6_v1bqs")]
+position = Vector2(714, 8)
+move_speed = 70.0
+
+[node name="EndFlag" type="Area2D" parent="." unique_id=1028902655]
+position = Vector2(319, 18)
+script = ExtResource("7_7qdet")
+scene_to_load = ExtResource("8_8npbe")
+
+[node name="Flag" type="Sprite2D" parent="EndFlag" unique_id=1883487920]
+position = Vector2(537, -63)
+texture = ExtResource("8_57dsp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EndFlag" unique_id=1774446656]
+position = Vector2(537, -63)
+shape = SubResource("CircleShape2D_5r5j8")
+
+[connection signal="body_entered" from="EndFlag" to="EndFlag" method="_on_body_entered"]

@@ -8,7 +8,7 @@ func _ready():
 func _damage_shake (health : int):
 	intensity = 3
 
-func _procces (delta):
+func _process(delta):
 	if intensity > 0: 
 		intensity = lerpf(intensity, 0, delta * 10)
 		offset = _get_random_offset()
