@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://baigr61r0a32m" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://dhqh7ypev0gq0" path="res://Sprites/Characters/character_0000.png" id="1_v0iea"]
 [ext_resource type="Texture2D" uid="uid://dy1spoj54r63p" path="res://Sprites/Characters/character_0001.png" id="3_6t5aa"]
+[ext_resource type="Script" uid="uid://cuhbnj4x33el2" path="res://Scenes/camera_2d.gd" id="3_x3wgy"]
 [ext_resource type="Script" uid="uid://73gcb5e2w7tv" path="res://Scenes/canvas_layer.gd" id="4_fkybt"]
 [ext_resource type="Texture2D" uid="uid://cnq4lxsfycmig" path="res://Sprites/Objects/tile_0044.png" id="4_vgqql"]
 
@@ -97,6 +98,7 @@ shape = SubResource("CapsuleShape2D_v0iea")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=677445473]
 zoom = Vector2(3, 3)
+script = ExtResource("3_x3wgy")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1072793909]
 libraries/ = SubResource("AnimationLibrary_vgqql")
