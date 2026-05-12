@@ -19,7 +19,7 @@ var move_input : float
 @onready var audio :AudioStreamPlayer = $AudioStreamPlayer
 
 var take_damage_sfx : AudioStream =preload("res://Audio/take_damage.wav")
-var coin_sfx :AudioStream = preload("res://Audio/coin.wav")
+var coin_sfx :AudioStream = preload("res://Audio/myinstants-2.mp3")
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
