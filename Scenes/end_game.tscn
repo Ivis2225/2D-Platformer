@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bvn7iw5koklun"]
+
+[ext_resource type="Texture2D" uid="uid://fpfme8tl7dus" path="res://Sprites/Backgrounds/backgroundForest.png" id="2_tiqjd"]
+
+[node name="End Game" type="Node2D" unique_id=1874637369]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=709899244]
+self_modulate = Color(1, 0.25, 0.25, 1)
+offset_left = 2.0
+offset_top = -301.0
+offset_right = 1157.0
+offset_bottom = 723.0
+texture = ExtResource("2_tiqjd")
+
+[node name="Label" type="Label" parent="." unique_id=1254456726]
+self_modulate = Color(0, 0, 0, 1)
+offset_left = 545.0
+offset_top = 227.0
+offset_right = 632.0
+offset_bottom = 276.0
+text = "Game Over
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayAgain" type="Button" parent="." unique_id=1591903701]
+offset_left = 544.0
+offset_top = 302.0
+offset_right = 631.0
+offset_bottom = 333.0
+text = "Play again"
+
+[node name="Quit" type="Button" parent="." unique_id=928220145]
+offset_left = 541.0
+offset_top = 356.0
+offset_right = 638.0
+offset_bottom = 387.0
+text = "Quit
+"

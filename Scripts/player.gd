@@ -66,8 +66,7 @@ func take_damage (amount: int):
 		call_deferred("game_over")
 		
 func game_over():
-	get_tree().change_scene_to_file("res://Scenes/menu.tscn")
-
+	get_tree().change_scene_to_file("res://Scenes/end_game.tscn")
 func increase_score (amount : int):
 	PlayerStats.score += amount
 	OnUpdateScore.emit(PlayerStats.score)
@@ -82,3 +81,4 @@ func _damage_flash ():
 func play_sound (sound : AudioStream):
 	audio.stream = sound
 	audio.play()
+	
