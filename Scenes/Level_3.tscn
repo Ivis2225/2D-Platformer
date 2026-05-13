@@ -85,7 +85,7 @@ position = Vector2(129, 3)
 move_speed = 70.0
 
 [node name="Enemy2" parent="Enemies" unique_id=726042534 instance=ExtResource("6_kqn1a")]
-position = Vector2(305, 76)
+position = Vector2(321, 73)
 move_speed = 70.0
 
 [node name="Enemy3" parent="Enemies" unique_id=36487614 instance=ExtResource("6_kqn1a")]

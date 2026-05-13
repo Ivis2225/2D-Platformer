@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://msdpa3b2ukh3" path="res://Sprites/Characters/character_0026.png" id="4_1dp5w"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nh7xm"]
-radius = 8.0
+radius = 11.045361
 
 [sub_resource type="Animation" id="Animation_aur7v"]
 resource_name = "Fly"
@@ -52,7 +52,9 @@ move_direction = Vector2(0, -70)
 move_speed = 40.0
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1685889505]
-texture = ExtResource("2_0830c")
+position = Vector2(-0.49999976, 1.000001)
+scale = Vector2(0.9583333, 1.25)
+texture = ExtResource("3_ghaa6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1627993761]
 shape = SubResource("CircleShape2D_nh7xm")
