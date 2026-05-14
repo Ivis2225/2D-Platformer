@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cxrv0no1ab8hc" path="res://Sprites/Backgrounds/backgroundDesert.png" id="2_4ge3q"]
 [ext_resource type="TileSet" uid="uid://bflv6wtvteymx" path="res://Sprites/Tiles/new_tile_set.tres" id="3_001cu"]
 [ext_resource type="PackedScene" uid="uid://c4ywbklgco3up" path="res://Scenes/player.tscn" id="4_5ufib"]
-[ext_resource type="PackedScene" uid="uid://d3d77g2etjelj" path="res://Scenes/coin.tscn" id="5_diio2"]
+[ext_resource type="PackedScene" uid="uid://fm8dawwq8v2d" path="res://Scenes/coinLevel1.tscn" id="5_8npbe"]
 [ext_resource type="PackedScene" uid="uid://cbtslt5vdjpjg" path="res://Scenes/enemy.tscn" id="6_v1bqs"]
 [ext_resource type="Script" uid="uid://dmf0fy8g241kc" path="res://Scripts/end_flag.gd" id="7_7qdet"]
 [ext_resource type="PackedScene" uid="uid://cgggk6bwcrhck" path="res://Scenes/menu.tscn" id="8_8npbe"]
@@ -55,23 +55,20 @@ tile_set = ExtResource("3_001cu")
 
 [node name="Coins" type="Node" parent="." unique_id=1068841369]
 
-[node name="coin2" parent="Coins" unique_id=1254235064 instance=ExtResource("5_diio2")]
-position = Vector2(128, -55)
+[node name="coin Level1" parent="Coins" unique_id=92117794 instance=ExtResource("5_8npbe")]
+position = Vector2(147, -55)
 
-[node name="coin3" parent="Coins" unique_id=440627544 instance=ExtResource("5_diio2")]
-position = Vector2(274, 23)
+[node name="coin Level2" parent="Coins" unique_id=1790109537 instance=ExtResource("5_8npbe")]
+position = Vector2(259, 3)
 
-[node name="coin4" parent="Coins" unique_id=1845963005 instance=ExtResource("5_diio2")]
-position = Vector2(388, 4)
+[node name="coin Level3" parent="Coins" unique_id=570493027 instance=ExtResource("5_8npbe")]
+position = Vector2(388, -12)
 
-[node name="coin5" parent="Coins" unique_id=808824757 instance=ExtResource("5_diio2")]
-position = Vector2(494, -16)
+[node name="coin Level4" parent="Coins" unique_id=708573232 instance=ExtResource("5_8npbe")]
+position = Vector2(569, -45)
 
-[node name="coin6" parent="Coins" unique_id=92117794 instance=ExtResource("5_diio2")]
-position = Vector2(658, -14)
-
-[node name="coin7" parent="Coins" unique_id=1904190779 instance=ExtResource("5_diio2")]
-position = Vector2(766, -68)
+[node name="coin Level5" parent="Coins" unique_id=85972193 instance=ExtResource("5_8npbe")]
+position = Vector2(730, -56)
 
 [node name="Enemies" type="Node" parent="." unique_id=1229462224]
 

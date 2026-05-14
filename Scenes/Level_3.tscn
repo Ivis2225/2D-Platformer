@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c4ywbklgco3up" path="res://Scenes/player.tscn" id="4_dudvk"]
 [ext_resource type="TileSet" uid="uid://ojub8tuxlklx" path="res://Sprites/Tiles/shade_tile_set.tres" id="4_dvi3f"]
 [ext_resource type="Texture2D" uid="uid://bj6ovxcwy180r" path="res://Sprites/Backgrounds/background1.png" id="5_kqn1a"]
-[ext_resource type="PackedScene" uid="uid://d3d77g2etjelj" path="res://Scenes/coin.tscn" id="5_m08rq"]
+[ext_resource type="PackedScene" uid="uid://d3d77g2etjelj" path="res://Scenes/coinlevel3.tscn" id="5_m08rq"]
 [ext_resource type="PackedScene" uid="uid://cbtslt5vdjpjg" path="res://Scenes/enemy.tscn" id="6_kqn1a"]
 [ext_resource type="Script" uid="uid://dmf0fy8g241kc" path="res://Scripts/end_flag.gd" id="7_ope7d"]
 [ext_resource type="PackedScene" uid="uid://cgggk6bwcrhck" path="res://Scenes/menu.tscn" id="8_qe2l3"]

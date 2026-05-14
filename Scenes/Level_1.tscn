@@ -5,7 +5,7 @@
 [ext_resource type="TileSet" uid="uid://bflv6wtvteymx" path="res://Sprites/Tiles/new_tile_set.tres" id="1_oiua3"]
 [ext_resource type="PackedScene" uid="uid://c4ywbklgco3up" path="res://Scenes/player.tscn" id="3_vnunq"]
 [ext_resource type="PackedScene" uid="uid://cbtslt5vdjpjg" path="res://Scenes/enemy.tscn" id="4_nw7js"]
-[ext_resource type="PackedScene" uid="uid://d3d77g2etjelj" path="res://Scenes/coin.tscn" id="5_nh7xm"]
+[ext_resource type="PackedScene" uid="uid://fm8dawwq8v2d" path="res://Scenes/coinLevel1.tscn" id="5_ptpgp"]
 [ext_resource type="Script" uid="uid://dmf0fy8g241kc" path="res://Scripts/end_flag.gd" id="6_5r5j8"]
 [ext_resource type="Texture2D" uid="uid://boekx8wdrkdv5" path="res://Sprites/Objects/tile_0112.png" id="6_j0k67"]
 [ext_resource type="PackedScene" uid="uid://ii4w5c8yv54s" path="res://Scenes/Level_2.tscn" id="8_aur7v"]
@@ -54,17 +54,17 @@ tile_set = ExtResource("1_oiua3")
 
 [node name="Coins" type="Node" parent="." unique_id=1068841369]
 
-[node name="coin2" parent="Coins" unique_id=1254235064 instance=ExtResource("5_nh7xm")]
-position = Vector2(109, -17)
+[node name="coin Level1" parent="Coins" unique_id=92117794 instance=ExtResource("5_ptpgp")]
+position = Vector2(101, -12)
 
-[node name="coin3" parent="Coins" unique_id=440627544 instance=ExtResource("5_nh7xm")]
-position = Vector2(170, -15)
+[node name="coin Level2" parent="Coins" unique_id=123850104 instance=ExtResource("5_ptpgp")]
+position = Vector2(166, -14)
 
-[node name="coin4" parent="Coins" unique_id=1845963005 instance=ExtResource("5_nh7xm")]
-position = Vector2(230, 0)
+[node name="coin Level3" parent="Coins" unique_id=956689081 instance=ExtResource("5_ptpgp")]
+position = Vector2(230, -6)
 
-[node name="coin5" parent="Coins" unique_id=808824757 instance=ExtResource("5_nh7xm")]
-position = Vector2(306, 19)
+[node name="coin Level4" parent="Coins" unique_id=1374421721 instance=ExtResource("5_ptpgp")]
+position = Vector2(308, 16)
 
 [node name="Enemies" type="Node" parent="." unique_id=1229462224]
 
