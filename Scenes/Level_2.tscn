@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://fm8dawwq8v2d" path="res://Scenes/coinLevel1.tscn" id="5_8npbe"]
 [ext_resource type="PackedScene" uid="uid://6wq7uqvms44c" path="res://Scenes/ShadeEnemy.tscn" id="6_8npbe"]
 [ext_resource type="Script" uid="uid://dmf0fy8g241kc" path="res://Scripts/end_flag.gd" id="7_7qdet"]
-[ext_resource type="PackedScene" uid="uid://cgggk6bwcrhck" path="res://Scenes/menu.tscn" id="8_8npbe"]
+[ext_resource type="PackedScene" uid="uid://dya0w77s0kwyg" path="res://Scenes/Level_3.tscn" id="8_8npbe"]
 [ext_resource type="Texture2D" uid="uid://boekx8wdrkdv5" path="res://Sprites/Objects/tile_0112.png" id="8_57dsp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5r5j8"]

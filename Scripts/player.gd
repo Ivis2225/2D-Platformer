@@ -13,7 +13,7 @@ var move_input : float
 var has_doubled_jumped : bool = false
 @export var health: int = 3
 
-@onready var sprite : Sprite2D = $Character0000
+@onready var sprite : AnimatedSprite2D = $Character0000
 @onready var anim : AnimationPlayer = $AnimationPlayer
 @onready var audio :AudioStreamPlayer = $AudioStreamPlayer
 

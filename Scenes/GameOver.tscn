@@ -4,12 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://fpfme8tl7dus" path="res://Sprites/Backgrounds/backgroundForest.png" id="2_rdiyk"]
 [ext_resource type="FontFile" uid="uid://d2od1li5arayr" path="res://Sprites/Backgrounds/storm_gust/Storm Gust.otf" id="4_5mu6e"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_1rerr"]
-font_size = 60
-font_color = Color(0.40128008, 0.028799972, 0.96, 1)
-outline_size = 10
-outline_color = Color(0, 0, 0, 1)
-
 [node name="Menu" type="Control" unique_id=302642013]
 layout_mode = 3
 anchors_preset = 15
@@ -27,23 +21,6 @@ offset_top = -44.0
 offset_right = 1160.0
 offset_bottom = 980.0
 texture = ExtResource("2_rdiyk")
-
-[node name="Tittle" type="Label" parent="." unique_id=1253702430]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -316.0
-offset_top = -101.0
-offset_right = 348.0
-offset_bottom = 8.5
-grow_horizontal = 2
-grow_vertical = 2
-label_settings = SubResource("LabelSettings_1rerr")
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=651625435]
 self_modulate = Color(1, 0.25, 0.25, 1)
@@ -71,6 +48,23 @@ theme_override_fonts/font = ExtResource("4_5mu6e")
 theme_override_font_sizes/font_size = 70
 text = "Quit "
 
+[node name="QuitButton2" type="Button" parent="TextureRect2" unique_id=318743470]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -221.5
+offset_top = -3.0
+offset_right = 282.5
+offset_bottom = 86.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_5mu6e")
+theme_override_font_sizes/font_size = 70
+text = "Game Over "
+
 [node name="PlayButton" type="Button" parent="TextureRect2" unique_id=1701530869]
 layout_mode = 1
 anchors_preset = 8
@@ -88,16 +82,6 @@ theme_override_fonts/font = ExtResource("4_5mu6e")
 theme_override_font_sizes/font_size = 70
 text = "Play"
 
-[node name="Label" type="Label" parent="." unique_id=2089768401]
-self_modulate = Color(0, 0, 0, 1)
-layout_mode = 0
-offset_left = 545.0
-offset_top = 227.0
-offset_right = 632.0
-offset_bottom = 276.0
-text = "Game Over
-"
-metadata/_edit_use_anchors_ = true
-
 [connection signal="pressed" from="TextureRect2/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="TextureRect2/QuitButton2" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="TextureRect2/PlayButton" to="." method="_on_play_button_pressed"]

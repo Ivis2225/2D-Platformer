@@ -24,6 +24,10 @@ config/icon="res://icon.svg"
 Playerstats="*uid://cw44we7jrb4ty"
 PlayerStats="*uid://jvow2wqljbcc"
 
+[display]
+
+window/size/mode=4
+
 [input]
 
 move_left={
