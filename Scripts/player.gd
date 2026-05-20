@@ -45,7 +45,7 @@ func _physics_process(delta):
 @warning_ignore("unused_parameter")
 func _process(delta):
 	if velocity.x != 0:
-		sprite.flip_h = velocity.x > 0
+		sprite.flip_h = velocity.x < 0
 		
 	# Fall death logic safe deferred check
 	if global_position.y > 200:

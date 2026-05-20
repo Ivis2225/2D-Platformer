@@ -1,0 +1,123 @@
+[gd_scene format=4 uid="uid://cs15r5rd2wsvy"]
+
+[ext_resource type="Script" uid="uid://bgfaniarqyafx" path="res://Scenes/node_2d.gd" id="1_2svyu"]
+[ext_resource type="Texture2D" uid="uid://dget8pj3pk25t" path="res://Sprites/Backgrounds/background2.png" id="2_i3wgq"]
+[ext_resource type="Texture2D" uid="uid://bj6ovxcwy180r" path="res://Sprites/Backgrounds/background1.png" id="3_dt5mq"]
+[ext_resource type="Texture2D" uid="uid://dkhk3giqlq54c" path="res://Sprites/Backgrounds/background4b.png" id="4_jloha"]
+[ext_resource type="TileSet" uid="uid://ojub8tuxlklx" path="res://Sprites/Tiles/shade_tile_set.tres" id="5_6fdmn"]
+[ext_resource type="PackedScene" uid="uid://c4ywbklgco3up" path="res://Scenes/player.tscn" id="6_iul47"]
+[ext_resource type="PackedScene" uid="uid://d3d77g2etjelj" path="res://Scenes/coinlevel3.tscn" id="7_jlilh"]
+[ext_resource type="PackedScene" uid="uid://cbtslt5vdjpjg" path="res://Scenes/enemy.tscn" id="8_k40la"]
+[ext_resource type="Script" uid="uid://dmf0fy8g241kc" path="res://Scripts/end_flag.gd" id="9_m20ph"]
+[ext_resource type="PackedScene" uid="uid://cgggk6bwcrhck" path="res://Scenes/menu.tscn" id="10_6dp3p"]
+[ext_resource type="Texture2D" uid="uid://boekx8wdrkdv5" path="res://Sprites/Objects/tile_0112.png" id="11_nm3nn"]
+[ext_resource type="PackedScene" uid="uid://dial134q6cl30" path="res://Sprites/Tiles/game_music.tscn" id="12_asykx"]
+[ext_resource type="AudioStream" uid="uid://dnuq0mbg17rt5" path="res://Audio/Shade#3-output.wav" id="13_ua0uu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5r5j8"]
+
+[node name="Main" type="Node2D" unique_id=1712301001]
+
+[node name="BackRound" type="Node2D" parent="." unique_id=1675172039]
+modulate = Color(0.9792667, 0.9037399, 0.60612965, 1)
+script = ExtResource("1_2svyu")
+
+[node name="BackgroundForest3" type="Sprite2D" parent="BackRound" unique_id=20630265]
+modulate = Color(0.9792667, 0.9037399, 0.60612965, 1)
+position = Vector2(961, 0.9999968)
+scale = Vector2(0.5, 0.50416666)
+texture = ExtResource("2_i3wgq")
+
+[node name="BackgroundForest5" type="Sprite2D" parent="BackRound/BackgroundForest3" unique_id=1089284525]
+modulate = Color(0.54676366, 0.33215898, 0.999999, 1)
+position = Vector2(-1417.0001, -240.00003)
+scale = Vector2(4.5145836, 3.983471)
+texture = ExtResource("3_dt5mq")
+
+[node name="BackgroundForest" type="Sprite2D" parent="BackRound" unique_id=119754240]
+self_modulate = Color(0.91764706, 0.9490196, 0.972549, 1)
+position = Vector2(-293, -58.499985)
+scale = Vector2(1.1104167, 1.55625)
+texture = ExtResource("4_jloha")
+
+[node name="BackgroundForest2" type="Sprite2D" parent="BackRound" unique_id=95351818]
+self_modulate = Color(0.91764706, 0.9490196, 0.972549, 1)
+position = Vector2(779.49994, -37.999985)
+scale = Vector2(1.1239582, 1.6583333)
+texture = ExtResource("4_jloha")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1940517327]
+rotation = 1.8904037e-05
+tile_map_data = PackedByteArray("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")
+tile_set = ExtResource("5_6fdmn")
+
+[node name="Player" parent="." unique_id=2116383489 instance=ExtResource("6_iul47")]
+position = Vector2(-22, -7)
+
+[node name="Coins" type="Node" parent="." unique_id=1068841369]
+
+[node name="coin2" parent="Coins" unique_id=1254235064 instance=ExtResource("7_jlilh")]
+position = Vector2(156, 59)
+
+[node name="coin3" parent="Coins" unique_id=440627544 instance=ExtResource("7_jlilh")]
+position = Vector2(258, 66)
+
+[node name="coin4" parent="Coins" unique_id=1845963005 instance=ExtResource("7_jlilh")]
+position = Vector2(370, 119)
+
+[node name="coin5" parent="Coins" unique_id=808824757 instance=ExtResource("7_jlilh")]
+position = Vector2(547, -8)
+
+[node name="coin6" parent="Coins" unique_id=92117794 instance=ExtResource("7_jlilh")]
+position = Vector2(658, -14)
+
+[node name="coin7" parent="Coins" unique_id=1904190779 instance=ExtResource("7_jlilh")]
+position = Vector2(800, 7)
+
+[node name="Enemies" type="Node" parent="." unique_id=1229462224]
+
+[node name="Enemy" parent="Enemies" unique_id=2103151942 instance=ExtResource("8_k40la")]
+position = Vector2(60, 21)
+move_speed = 100.0
+
+[node name="Enemy2" parent="Enemies" unique_id=726042534 instance=ExtResource("8_k40la")]
+position = Vector2(317, 102)
+move_speed = 100.0
+
+[node name="Enemy3" parent="Enemies" unique_id=36487614 instance=ExtResource("8_k40la")]
+position = Vector2(477, 73)
+move_direction = Vector2(-70, 0)
+move_speed = 100.0
+
+[node name="Enemy4" parent="Enemies" unique_id=815045713 instance=ExtResource("8_k40la")]
+position = Vector2(601, 9)
+move_speed = 100.0
+
+[node name="Enemy5" parent="Enemies" unique_id=559992639 instance=ExtResource("8_k40la")]
+position = Vector2(698, 23)
+move_direction = Vector2(0, -100)
+move_speed = 100.0
+
+[node name="Enemy6" parent="Enemies" unique_id=772377188 instance=ExtResource("8_k40la")]
+position = Vector2(685, -27)
+move_direction = Vector2(0, 100)
+move_speed = 100.0
+
+[node name="EndFlag" type="Area2D" parent="." unique_id=1028902655]
+position = Vector2(319, 18)
+script = ExtResource("9_m20ph")
+scene_to_load = ExtResource("10_6dp3p")
+
+[node name="Flag" type="Sprite2D" parent="EndFlag" unique_id=1883487920]
+position = Vector2(917, 36)
+texture = ExtResource("11_nm3nn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EndFlag" unique_id=1774446656]
+position = Vector2(921, 36)
+shape = SubResource("CircleShape2D_5r5j8")
+
+[node name="AudioStreamPlayer2D" parent="." unique_id=971839956 instance=ExtResource("12_asykx")]
+stream = ExtResource("13_ua0uu")
+volume_db = 7.29
+
+[connection signal="body_entered" from="EndFlag" to="EndFlag" method="_on_body_entered"]
