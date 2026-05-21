@@ -9,8 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://d3d77g2etjelj" path="res://Scenes/coinlevel3.tscn" id="5_m08rq"]
 [ext_resource type="PackedScene" uid="uid://cbtslt5vdjpjg" path="res://Scenes/enemy.tscn" id="6_kqn1a"]
 [ext_resource type="Script" uid="uid://dmf0fy8g241kc" path="res://Scripts/end_flag.gd" id="7_ope7d"]
-[ext_resource type="PackedScene" uid="uid://cgggk6bwcrhck" path="res://Scenes/menu.tscn" id="8_qe2l3"]
 [ext_resource type="Texture2D" uid="uid://boekx8wdrkdv5" path="res://Sprites/Objects/tile_0112.png" id="9_hwx6u"]
+[ext_resource type="PackedScene" uid="uid://cs15r5rd2wsvy" path="res://Scenes/Level_4.tscn" id="10_m08rq"]
 [ext_resource type="PackedScene" uid="uid://dial134q6cl30" path="res://Sprites/Tiles/game_music.tscn" id="13_m08rq"]
 [ext_resource type="AudioStream" uid="uid://dnuq0mbg17rt5" path="res://Audio/Shade#3-output.wav" id="14_kqn1a"]
 
@@ -104,7 +104,7 @@ move_speed = 100.0
 [node name="EndFlag" type="Area2D" parent="." unique_id=1028902655]
 position = Vector2(319, 18)
 script = ExtResource("7_ope7d")
-scene_to_load = ExtResource("8_qe2l3")
+scene_to_load = ExtResource("10_m08rq")
 
 [node name="Flag" type="Sprite2D" parent="EndFlag" unique_id=1883487920]
 position = Vector2(507, -60)

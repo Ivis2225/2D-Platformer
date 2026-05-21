@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d2jieohgnoqis"]
 
 [ext_resource type="Script" uid="uid://cwu58xyhgic4x" path="res://Scenes/game_over.gd" id="1_ktc4i"]
-[ext_resource type="Texture2D" uid="uid://fpfme8tl7dus" path="res://Sprites/Backgrounds/backgroundForest.png" id="2_rdiyk"]
+[ext_resource type="Texture2D" uid="uid://tgrxfivijwin" path="res://Sprites/Backgrounds/game design.png" id="2_ktc4i"]
 [ext_resource type="FontFile" uid="uid://d2od1li5arayr" path="res://Sprites/Backgrounds/storm_gust/Storm Gust.otf" id="4_5mu6e"]
 
 [node name="Menu" type="Control" unique_id=302642013]
@@ -14,23 +14,14 @@ grow_vertical = 2
 scale = Vector2(0.9975515, 1)
 script = ExtResource("1_ktc4i")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=2103130491]
-self_modulate = Color(0.27387273, 0.27387273, 0.27387273, 1)
-layout_mode = 0
-offset_left = 6.0
-offset_top = -44.0
-offset_right = 1155.8301
-offset_bottom = 980.0
-texture = ExtResource("2_rdiyk")
-
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=651625435]
 self_modulate = Color(1, 0.25, 0.25, 1)
 layout_mode = 0
-offset_left = 2.0
-offset_top = -301.0
-offset_right = 3241.938
-offset_bottom = 1931.0
-texture = ExtResource("2_rdiyk")
+offset_left = -39.095726
+offset_top = -18.0
+offset_right = 3049.4666
+offset_bottom = 1925.0
+texture = ExtResource("2_ktc4i")
 
 [node name="QuitButton" type="Button" parent="TextureRect2" unique_id=1478388852]
 layout_mode = 1
@@ -39,10 +30,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -108.262695
-offset_top = 209.0
-offset_right = 91.737305
-offset_bottom = 298.0
+offset_left = -102.751465
+offset_top = 209.5
+offset_right = 97.248535
+offset_bottom = 298.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("4_5mu6e")
@@ -56,10 +47,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -256.62598
-offset_top = -8.0
-offset_right = 247.37402
-offset_bottom = 81.0
+offset_left = -241.09033
+offset_top = -29.5
+offset_right = 262.90967
+offset_bottom = 59.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("4_5mu6e")
@@ -73,10 +64,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -111.27014
-offset_top = 113.0
-offset_right = 91.72986
-offset_bottom = 202.0
+offset_left = -107.763794
+offset_top = 95.5
+offset_right = 95.236206
+offset_bottom = 184.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("4_5mu6e")

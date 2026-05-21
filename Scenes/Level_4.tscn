@@ -36,8 +36,8 @@ texture = ExtResource("3_dt5mq")
 
 [node name="BackgroundForest" type="Sprite2D" parent="BackRound" unique_id=119754240]
 self_modulate = Color(0.91764706, 0.9490196, 0.972549, 1)
-position = Vector2(-293, -58.499985)
-scale = Vector2(1.1104167, 1.55625)
+position = Vector2(-293, -37.99997)
+scale = Vector2(1.1104167, 1.6416667)
 texture = ExtResource("4_jloha")
 
 [node name="BackgroundForest2" type="Sprite2D" parent="BackRound" unique_id=95351818]
@@ -69,7 +69,7 @@ position = Vector2(370, 119)
 position = Vector2(547, -8)
 
 [node name="coin6" parent="Coins" unique_id=92117794 instance=ExtResource("7_jlilh")]
-position = Vector2(658, -14)
+position = Vector2(648, -24)
 
 [node name="coin7" parent="Coins" unique_id=1904190779 instance=ExtResource("7_jlilh")]
 position = Vector2(800, 7)
@@ -99,9 +99,24 @@ move_direction = Vector2(0, -100)
 move_speed = 100.0
 
 [node name="Enemy6" parent="Enemies" unique_id=772377188 instance=ExtResource("8_k40la")]
-position = Vector2(685, -27)
+position = Vector2(685, -61)
 move_direction = Vector2(0, 100)
 move_speed = 100.0
+
+[node name="Enemy7" parent="Enemies" unique_id=1238201574 instance=ExtResource("8_k40la")]
+position = Vector2(912, 10)
+move_direction = Vector2(0, 100)
+move_speed = 140.0
+
+[node name="Enemy8" parent="Enemies" unique_id=1198435021 instance=ExtResource("8_k40la")]
+position = Vector2(1051, 69)
+move_direction = Vector2(0, 100)
+move_speed = 150.0
+
+[node name="Enemy9" parent="Enemies" unique_id=1550489132 instance=ExtResource("8_k40la")]
+position = Vector2(1209, 11)
+move_direction = Vector2(0, 100)
+move_speed = 160.0
 
 [node name="EndFlag" type="Area2D" parent="." unique_id=1028902655]
 position = Vector2(319, 18)

@@ -30,8 +30,8 @@ offset_bottom = 980.0
 texture = ExtResource("1_1rerr")
 
 [node name="ShadeDesign" type="Sprite2D" parent="TextureRect" unique_id=802069496]
-position = Vector2(588.00006, 532)
-scale = Vector2(0.185, 0.151875)
+position = Vector2(1506, 1000)
+scale = Vector2(0.47187495, 0.29812497)
 texture = ExtResource("3_cayip")
 
 [node name="Tittle" type="Label" parent="." unique_id=1253702430]

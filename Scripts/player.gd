@@ -56,12 +56,26 @@ func _process(delta):
 
 func _manage_animation ():
 	if not is_on_floor():
-		anim.play("Jump")
+		sprite.play("Jump")
+		# Set the exact scale you want ONLY when jumping
+		sprite.scale = Vector2(0.05, 0.05) 
 	elif move_input != 0:
-		anim.play("Move")
+		sprite.play("Move")
+		# Set the exact scale you want ONLY when moving/walking
+		sprite.scale = Vector2(0.5, 0.5) 
 	else:
-		anim.play("idle")
-	
+		sprite.stop()              
+		sprite.animation = "Move"  
+		sprite.frame = 0           
+		# Keeps the walking scale while standing still
+		sprite.scale = Vector2(0.5, 0.5) 
+
+	  
+	  
+
+   
+
+
 func take_damage (amount: int):
 	health -= amount
 	OnUpdateHealth.emit(health)
